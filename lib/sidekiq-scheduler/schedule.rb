@@ -12,7 +12,7 @@ module SidekiqScheduler
     #     "MakeTea" => {
     #       "every" => "1m" },
     #     "some_name" => {
-    #       "cron"        => "5/* * * *",
+    #       "cron"        => "5/* * * * *",
     #       "class"       => "DoSomeWork",
     #       "args"        => "work on this string",
     #       "description" => "this thing works it"s butter off" },

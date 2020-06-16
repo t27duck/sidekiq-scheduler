@@ -62,7 +62,7 @@ end
 
 :schedule:
   hello_world:
-    cron: '0 * * * * *'   # Runs once per minute
+    cron: '0 * * * *'   # Runs once per minute
     class: HelloWorld
 ```
 
@@ -76,7 +76,7 @@ You'll see the following output:
 
 ```
 2016-12-10T11:53:08.561Z 6452 TID-ovouhwvm4 INFO: Loading Schedule
-2016-12-10T11:53:08.561Z 6452 TID-ovouhwvm4 INFO: Scheduling HelloWorld {"cron"=>"0 * * * * *", "class"=>"HelloWorld"}
+2016-12-10T11:53:08.561Z 6452 TID-ovouhwvm4 INFO: Scheduling HelloWorld {"cron"=>"0 * * * *", "class"=>"HelloWorld"}
 2016-12-10T11:53:08.562Z 6452 TID-ovouhwvm4 INFO: Schedules Loaded
 
 2016-12-10T11:54:00.212Z 6452 TID-ovoulivew HelloWorld JID-b35f36a562733fcc5e58444d INFO: start
@@ -109,10 +109,10 @@ The schedule is configured through the `:schedule` config entry in the sidekiq c
 ``` yaml
 :schedule:
   CancelAbandonedOrders:
-    cron: '0 */5 * * * *'   # Runs when second = 0, every 5 minutes
+    cron: '0 */5 * * *'   # Runs when second = 0, every 5 minutes
 
   queue_documents_for_indexing:
-    cron: '0 0 * * * *'   # Runs every hour
+    cron: '0 0 * * *'   # Runs every hour
 
     # By default the job name will be taken as worker class name.
     # If you want to have a different job name and class name, provide the 'class' option
@@ -170,7 +170,7 @@ Cron, every, and interval types push jobs into sidekiq in a recurrent manner.
 ``` yaml
 :schedule:
   HelloWorld:
-    cron: '0 * * * * *' # Runs when second = 0
+    cron: '0 * * * *' # Runs when second = 0
 ```
 
 `every` triggers following a given frequency:
