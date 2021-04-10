@@ -1,10 +1,15 @@
 require 'sidekiq-scheduler/web'
 require 'rack/test'
+require 'securerandom'
 
 describe Sidekiq::Web do
   include Rack::Test::Methods
 
-  let(:app) { Sidekiq::Web }
+  let(:app) do
+    web = Sidekiq::Web.new
+    web.use(Rack::Session::Cookie, secret: SecureRandom.hex(32))
+    web
+  end
 
   let(:enabled_job_name) { 'Foo Job' }
   let(:disabled_job_name) { 'Bar Job' }
