@@ -32,6 +32,49 @@ pushes jobs in a scheduled way, mimicking cron utility.
 
 __Note:__ If you are looking for version 2.2.*, go to [2.2-stable branch](https://github.com/moove-it/sidekiq-scheduler/tree/2.2-stable).
 
+## What this fork is
+
+This fork is collection of commits from other community forks with the goal of having this gem working on the most recent sidekiq and redis gems as well as Ruby 3.0.
+
+This fork includes these commits from these forks:
+
+#### nulty/sidekiq-scheduler
+- 11adf20b73cce65c551e3c36f1c492715a602c9d - Example cron formats have incorrect number of values
+
+#### taylorkearns/sidekiq-scheduler
+- 57036928dd650ad1e8717b8faeea6a4ff10250d7 - Update README to reflect reading Rails timezone
+
+#### amatsuda/sidekiq-scheduler
+- c67c97c9419b12cc92998dadcababf9d2eb10437 - Avoid circular require: scheduler.rb <=> manager.rb
+
+#### olleolleolle/sidekiq-scheduler
+- bdbebfe1970a8253b8b9c12079923daed8795a21 - Refer to https for rubygems.org
+
+#### rmm5t/sidekiq-scheduler
+- d442b794e67675049453e572df31ea24f1f49fc4 - Upgrade redis dependency
+- 358e81a9f9c34198f8d2ff76abbddae19bac98a8 - Changed redis "exists" method calls to "exists?"
+- 41bb577cb8e4b49febeb96f004362a86a670330f - Upgrade mock_redis
+- 15445357137fe3ca7a1f15b7b8a71b56983ca314 - Fix pending specs
+- 348ac7cd2ed11dec26ed4d4a28d53aa9f9a60517 - Use strings as keys instead of symbols
+- 43558e5446ee6b5bed6bd9d8737c98fe02da0a92 - Drop support for ruby 2.2 and 2.3
+
+#### c-sonnier/sidekiq-scheduler
+- 4fb65270c70468f0a813d1d4230f28a4626136d9 - fix: sort recurring jobs by name
+
+#### stefanahman/sidekiq-scheduler
+- be9459cf057f9b75e4f6672685e998773fb890f6 - Add support for Ruby 3.0
+
+#### rvshare/sidekiq-scheduler
+- ea1d0f82804f8c5b6c947ee78b51ee05c65cb21d - Figure out exactly when the job is supposed to run
+- c75674926ab93cdd1d723197077dada53a0b39e8 - Can't use return because of how Rufus handles the block
+- afa4daed22ef01eec7acae927fabbdd3281cb1da - Use #utc to get an instance of Time
+- 1ff1679eaafab321ab0a4af90ed261fed4ae2dd4 - Round `time` to remove sub seconds
+- 3367f7a67a66eaec15cc0947a1f7a4aa962c6cef - Register a job in a redis transaction
+- a94d5b7cc2212af0df31c8a0aac22154d80ff17f - Remove dead code
+- 546dd996249851be4b3bce1403ec9533c045eaef - Use list group instead of table for improve web UI
+- f127e9ab98959e3bb9f9d4a467d28c3ffe88078d - Fix misspelling `multi`
+- 30e658fed5ccab06275688645a040a281c53f59f - Fixed CSS for dark mode
+
 ## Installation
 
 ``` shell
